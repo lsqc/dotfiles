@@ -197,7 +197,8 @@ bar {
     colors {
 		# colorclass border background text
         separator #ffffff
-        background #120f16
+        background #00000000
+        #background #120f16
 #	    background #000000
         statusline #dddddd
         focused_workspace #911634 #251f33 $fuchsia-color
