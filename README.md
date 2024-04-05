@@ -1,4 +1,4 @@
-# dotfiles 
+# dotfiles
 
 what do u expect me to write here LOL
 
