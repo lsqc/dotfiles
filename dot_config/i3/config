@@ -183,14 +183,12 @@ bindsym Mod4+r mode "resize"
 # placeholder for color
 set $fuchsia-color "#845EC2"
 
-workspace_layout tabbed
-
 # Start i3bar to display a workspace bar
 bar {
     tray_output primary
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:DejaVu Sans Mono, FontAwesome 13
     position top
-    padding 0px 10px 0px 10px
+#   padding 0px 10px 0px 10px
     i3bar_command i3bar --transparency 
     status_command i3status-rs ~/.i3status-rs.conf
     colors {
@@ -234,6 +232,3 @@ bindsym $mod+p exec rofi -modi "clipboard:greenclip print" -show clipboard -run-
 
 # start xfce polkit
 exec "/usr/lib/xfce-polkit/xfce-polkit"
-
-# set thunar in floating mode
-for_window [class="thunar"] floating enable
