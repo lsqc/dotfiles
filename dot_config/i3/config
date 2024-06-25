@@ -2,13 +2,25 @@ font Hack 15
 
 set $mod Mod4
 
+exec dbus-update-activation-environment
 exec --no-startup-id dex --autostart --environment i3
 
 # start greepclip
 exec --no-startup-id greenclip daemon
 
+# start ssh agent
+exec ssh-agent zsh
+
+# start blueman applet
+exec blueman-applet
+
 # start lxsession
 exec lxsession
+
+exec_always ~/scripts/conf-x1y3-trackpad.sh
+
+# start notification agent 
+exec /usr/lib/notification-daemon-1.0/notification-daemon
 
 # i3lock
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -21,10 +33,10 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -39,7 +51,7 @@ floating_modifier Mod1
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty #--command tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -108,8 +120,8 @@ set $ws3 "3 📝"
 set $ws4 "4"
 set $ws5 "5 📁"
 set $ws6 "6 🎮"
-set $ws7 "7"
-set $ws8 "8 🎛️"
+set $ws7 "7 🧅"
+set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
@@ -138,7 +150,8 @@ bindsym Mod1+Tab workspace back_and_forth
 bindsym Mod1+Shift+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
 
 # lock screen
-bindsym $mod+l exec "i3lock -c 222222 -i ~/.i3/wallpaper.png"
+#bindsym $mod+l exec "i3lock -c 222222 -i ~/.i3/wallpaper.png"
+bindsym $mod+l exec "betterlockscreen -l dimblur --display 1 --span"
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -193,7 +206,7 @@ set $fuchsia-color "#845EC2"
 bar {
     tray_output primary
     font pango:Hack, FontAwesome 15
-    position top
+    position bottom
 #   padding 0px 10px 0px 10px
     i3bar_command i3bar --transparency 
     status_command i3status-rs ~/.i3status-rs.conf
@@ -212,12 +225,12 @@ bar {
 }
 
 # window borders
-for_window [class="^.*"] border pixel 3
-default_border pixel 1
-default_floating_border pixel 1
+#for_window [class="^.*"] border pixel 3
+default_border pixel 3
+default_floating_border pixel 0
 
 # window gaps
-gaps inner 10px
+gaps inner 5px
 
 # monitor alignment
 exec xrandr --output DP-3 --right-of HDMI-0
@@ -231,6 +244,9 @@ bindsym $mod+Ctrl+Up resize grow height 2 px or 2 ppt
 bindsym $mod+Ctrl+Down resize shrink height 2 px or 2 ppt
 bindsym $mod+Ctrl+Left resize grow width 2 px or 2 ppt
 
+# set firefox notifications to floating mode
+for_window [class="Firefox" title="^Page Info"] floating enable
+
 # start rofi emoji menu
 bindsym $mod+e exec rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c
 
@@ -240,5 +256,5 @@ bindsym $mod+p exec rofi -modi "clipboard:greenclip print" -show clipboard -run-
 # start xfce polkit
 #exec "/usr/lib/xfce-polkit/xfce-polkit"
 
-
-client.focused $fuchsia-color $fuchsia-color #ffffff #2e9ef4 #285577 
+# assign workspaces
+assign [class="jetbrains-toolbox"] $ws3
