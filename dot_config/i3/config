@@ -22,6 +22,9 @@ exec_always ~/scripts/conf-x1y3-trackpad.sh
 # start notification agent 
 exec /usr/lib/notification-daemon-1.0/notification-daemon
 
+# start polkit
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 # i3lock
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
@@ -217,9 +220,9 @@ bar {
         #background #120f16
 #	    background #000000
         statusline #dddddd
-        focused_workspace #911634 #251f33 $fuchsia-color
-        active_workspace #251f33 #120f16 #ffffff
-        inactive_workspace #120f16 #120f16 #ffffff
+        focused_workspace #46494C #46494C #00aaff ##1985A1
+        active_workspace #46494C #46494C #ffffff
+        inactive_workspace #120f16 #120f16 #46494C
 #       urgent_workspace #2f343a #900000 #ffffff
     }
 }
@@ -236,7 +239,7 @@ gaps inner 5px
 exec xrandr --output DP-3 --right-of HDMI-0
 
 #set background image 
-exec feh --bg-scale ~/.i3/wallpaper.png
+exec feh --bg-fill ~/.i3/wallpaper.png
 
 #window resize 
 bindsym $mod+Ctrl+Right resize shrink width 2 px or 2 ppt
@@ -248,13 +251,10 @@ bindsym $mod+Ctrl+Left resize grow width 2 px or 2 ppt
 for_window [class="Firefox" title="^Page Info"] floating enable
 
 # start rofi emoji menu
-bindsym $mod+e exec rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c
+# bindsym $mod+e exec rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c --> removed
 
 # start greenclip
-bindsym $mod+p exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+#bindsym $mod+p exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' --> removed
 
-# start xfce polkit
-#exec "/usr/lib/xfce-polkit/xfce-polkit"
-
-# assign workspaces
+# workspace assignments
 assign [class="jetbrains-toolbox"] $ws3
