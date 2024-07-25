@@ -17,16 +17,14 @@ exec blueman-applet
 # start lxsession
 exec lxsession
 
-exec_always ~/scripts/conf-x1y3-trackpad.sh
+# configure trackpoint
+exec_always ~/scripts/trackpadconfig.sh
 
 # start notification agent 
 exec /usr/lib/notification-daemon-1.0/notification-daemon
 
 # start polkit
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
-# i3lock
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # start picom
 exec --no-startup-id picom --config ~/.config/picom.conf
