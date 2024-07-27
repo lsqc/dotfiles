@@ -170,8 +170,10 @@ bindsym $mod+F12 workspace number $ws22
 bindsym Shift+Print exec shutter -s 
 
 # move workspace to other monitor
-bindsym $mod+Shift+Ctrl+plus move workspace to output left
-bindsym $mod+Shift+Crtl+minus move workspace to output right
+bindsym $mod+Shift+Ctrl+Up move workspace to output up
+bindsym $mod+Shift+Crtl+Down move workspace to output down
+bindsym $mod+Shift+Crtl+Left move workspace to output left
+bindsym $mod+Shift+Crtl+Right move workspace to output right
 
 # alt tab remake
 bindsym Mod1+Tab workspace back_and_forth
