@@ -167,7 +167,7 @@ bindsym $mod+F10 workspace number $ws20
 bindsym $mod+F11 workspace number $ws21
 bindsym $mod+F12 workspace number $ws22
 
-bindsym Shift+Print exec shutter -s 
+bindsym Shift+Print exec ~/repos/dotfiles/scripts/screenshot.sh
 
 # move workspace to other monitor
 bindsym $mod+Shift+Ctrl+Up move workspace to output up
