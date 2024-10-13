@@ -1,1 +1,25 @@
-exec i3
+
+# load settings from Xresources
+xrdb ~/.Xresources
+
+# start network manager applet
+nm-applet
+
+# start notification agent
+/usr/lib/notification-daemon-1.0/notification-daemon
+
+# start polkit
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# start picom
+picom --config ~/.config/picom.conf
+
+# start lxsession
+lxsession
+
+# start bluetooth applet
+blueman-applet
+
+#exec i3
+# start window manager
+exec dwm
