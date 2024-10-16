@@ -20,6 +20,5 @@ lxsession &
 # start bluetooth applet
 blueman-applet &
 
-#exec i3
 # start window manager
-exec dwm
+exec i3
