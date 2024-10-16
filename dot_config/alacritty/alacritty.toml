@@ -6,6 +6,4 @@ import = [
 size = 12.0
 
 [font.normal]
-#family = "Hack"
-#family = "Comic Code Ligatures"
 family = "SF Mono"
