@@ -5,6 +5,7 @@ xrdb ~/.Xresources
 # start network manager applet
 nm-applet&
 
+setxkbmap eu
 # start notification agent
 /usr/lib/notification-daemon-1.0/notification-daemon &
 
