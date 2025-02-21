@@ -1,3 +1,6 @@
+-- disable mouse 
+vim.opt.mouse = ""
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -17,7 +20,7 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
-
+-- use space w for switching 
 vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
 
 local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
