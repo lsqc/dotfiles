@@ -67,7 +67,7 @@ bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
 
-bindsym $mod+e exec alacritty -e yazi
+bindsym $mod+e exec alacritty -e nnn
 
 bindsym $mod+Shift+space floating toggle
 
