@@ -6,19 +6,14 @@ exec xrdb ~/.Xresources
 exec dbus-update-activation-environment
 exec --no-startup-id dex --autostart --environment i3
 
-# start greepclip
-exec --no-startup-id greenclip daemon
+#exec --no-startup-id greenclip daemon
 
-# start ssh agent
 exec ssh-agent zsh
 
-# configure trackpoint
 exec_always ~/scripts/trackpadconfig.sh
 
-# Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-# use these keys for focus, movement, and resize directions when reaching for
-# the arrows is not convenient
+
 set $up n
 set $down k
 set $left j
@@ -26,85 +21,60 @@ set $right semicolon
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-# Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-# Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-# Media player controls
 #bindsym XF86AudioPlay exec playerctl play-pause
 #bindsym XF86AudioPause exec playerctl play-pause
 #bindsym XF86AudioNext exec playerctl next
 #bindsym XF86AudioPrev exec playerctl previous
-
-# use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
 
 tiling_drag modifier titlebar
 
-# start a terminal
 bindsym $mod+Return exec alacritty #--command tmux
 
-# kill focused window
 bindsym $mod+Shift+q kill
 
-# rofi hotkey
 bindsym Mod4+d exec rofi -show drun -show-icons
 
-# change focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
 bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-# split in horizontal orientation
-bindsym $mod+h split h
 
-# split in vertical orientation
+bindsym $mod+h split h
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym $mod+e exec yazi
 
-bindsym $mod+e exec thunar
-# toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
 bindsym $mod+a focus parent
-# focus the child container
-#bindsym $mod+d focus child
 
-# move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
 bindsym $mod+minus scratchpad show
