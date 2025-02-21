@@ -79,18 +79,18 @@ bindsym $mod+Shift+minus move scratchpad
 
 bindsym $mod+minus scratchpad show
 
-set $ws1 "1 🦊"
-set $ws2 "2 🖥️"
-set $ws3 "3 📝"
+set $ws1 "1: web"
+set $ws2 "2: ter"
+set $ws3 "3: ide"
 set $ws4 "4"
-set $ws5 "5 📁"
-set $ws6 "6 🎮"
+set $ws5 "5: nnn"
+set $ws6 "6: game"
 set $ws7 "7"
-set $ws8 "8  "
+set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $ws11 "11 ✉️"
+set $ws11 "11: com"
 set $ws12 "12"
 set $ws13 "13"
 set $ws14 "14"
@@ -174,7 +174,7 @@ bindsym $mod+Shift+F11 move container to workspace number $ws21
 bindsym $mod+Shift+F12 move container to workspace number $ws22
 
 # screenshot hotkey
-bindsym Shift+Print exec --no-startup-id /bin/bash -c '/home/leo/repos/dotfiles/scripts/screenshot.sh >> /home/leo/screenshot.log 2>&1'
+bindsym Shift+Print exec --no-startup-id /bin/bash -c '~/repos/dotfiles/scripts/screenshot.sh >> /home/leo/screenshot.log 2>&1'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -183,15 +183,9 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'wanna quit i3?' -B 'yes senpai~ ' 'i3-msg exit'"
 
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym $left       resize shrink width 10 px or 10 ppt
         bindsym $down       resize grow height 10 px or 10 ppt
         bindsym $up         resize shrink height 10 px or 10 ppt
