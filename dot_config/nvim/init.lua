@@ -1,6 +1,12 @@
 -- disable mouse 
 vim.opt.mouse = ""
 
+-- tab indent configuration
+vim.o.tabstop = 4 -- set tab character to 4 spaces
+vim.o.expandtab = true -- insert spaces instead of tab character
+vim.o.softtabstop = 4 -- amount of spaces inserted (replaces tab character)
+vim.o.shiftwidth = 4 -- amount of spaces inserted when indenting
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -17,7 +23,7 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
 })
 -- use space+w for switching 
