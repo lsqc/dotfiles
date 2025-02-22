@@ -23,24 +23,19 @@ require("nvim-tree").setup({
 -- use space w for switching 
 vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
 
+-- install packer if not installed already
 local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if not vim.loop.fs_stat(install_path) then
   vim.fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
 vim.cmd [[packadd packer.nvim]]
-
 vim.cmd('autocmd VimEnter * NvimTreeOpen')  -- start NvimTree on start
 
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
-use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-})
-
-
+-- tree plugin
 use {
   'nvim-tree/nvim-tree.lua',
   requires = {
