@@ -20,7 +20,7 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
--- use space w for switching 
+-- use space+w for switching 
 vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
 
 -- install packer if not installed already
