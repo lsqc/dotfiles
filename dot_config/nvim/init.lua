@@ -35,6 +35,12 @@ vim.cmd('autocmd VimEnter * NvimTreeOpen')  -- start NvimTree on start
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
+
+
 use {
   'nvim-tree/nvim-tree.lua',
   requires = {
