@@ -15,6 +15,7 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
 
+-- config for nvim tree
 require("nvim-tree").setup({
   sort = {
     sorter = "case_sensitive",
@@ -29,7 +30,8 @@ require("nvim-tree").setup({
     dotfiles = false,
   },
 })
--- use space+w for switching 
+
+-- use space+w for window switching 
 vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
 
 -- install packer if not installed already
@@ -37,8 +39,11 @@ local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvi
 if not vim.loop.fs_stat(install_path) then
   vim.fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
-
+ 
+-- packer
 vim.cmd [[packadd packer.nvim]]
+
+-- open NvimTree on start
 vim.cmd [[
     autocmd VimEnter * NvimTreeOpen
     autocmd VimEnter * ++nested wincmd w
@@ -48,7 +53,7 @@ require('packer').startup(function(use)
   	use 'wbthomason/packer.nvim'
 	use 'sbdchd/neoformat'
 
-
+use {'iamcco/markdown-preview.nvim'}
 -- tree plugin
 use {
 
@@ -59,4 +64,3 @@ use {
 }
 
 end)
-
