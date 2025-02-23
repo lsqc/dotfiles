@@ -42,14 +42,17 @@ vim.cmd [[packadd packer.nvim]]
 vim.cmd('autocmd VimEnter * NvimTreeOpen')  -- start NvimTree on start
 
 require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
+  	use 'wbthomason/packer.nvim'
+	use 'sbdchd/neoformat'
+
 
 -- tree plugin
 use {
-  'nvim-tree/nvim-tree.lua',
-  requires = {
-    'nvim-tree/nvim-web-devicons', -- optional
-  },
+
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+        'nvim-tree/nvim-web-devicons', -- optional
+    },
 }
 
 end)
