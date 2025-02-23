@@ -39,7 +39,10 @@ if not vim.loop.fs_stat(install_path) then
 end
 
 vim.cmd [[packadd packer.nvim]]
-vim.cmd('autocmd VimEnter * NvimTreeOpen')  -- start NvimTree on start
+vim.cmd [[
+    autocmd VimEnter * NvimTreeOpen
+    autocmd VimEnter * ++nested wincmd w
+]]
 
 require('packer').startup(function(use)
   	use 'wbthomason/packer.nvim'
