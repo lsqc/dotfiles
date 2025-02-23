@@ -6,10 +6,6 @@ exec xrdb ~/.Xresources
 exec dbus-update-activation-environment
 exec --no-startup-id dex --autostart --environment i3
 
-#exec --no-startup-id greenclip daemon
-
-exec ssh-agent zsh
-
 exec_always ~/scripts/trackpadconfig.sh
 
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -67,6 +63,7 @@ bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
 
+# file manager hotkey
 bindsym $mod+e exec alacritty -e nnn
 
 bindsym $mod+Shift+space floating toggle
@@ -82,7 +79,7 @@ bindsym $mod+minus scratchpad show
 set $ws1 "1: web"
 set $ws2 "2: ter"
 set $ws3 "3: ide"
-set $ws4 "4"
+set $ws4 "4: dsc"
 set $ws5 "5: nnn"
 set $ws6 "6: game"
 set $ws7 "7"
