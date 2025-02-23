@@ -1,6 +1,9 @@
 -- disable mouse 
 vim.opt.mouse = ""
 
+-- nvim tree toggle
+vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
 -- tab indent configuration
 vim.o.tabstop = 4 -- set tab character to 4 spaces
 vim.o.expandtab = true -- insert spaces instead of tab character
