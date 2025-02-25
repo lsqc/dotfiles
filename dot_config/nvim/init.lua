@@ -4,6 +4,9 @@ vim.opt.mouse = ""
 -- nvim tree toggle
 vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
+-- use space+w for window switching
+vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
+
 -- tab indent configuration
 vim.o.tabstop = 4 -- set tab character to 4 spaces
 vim.o.expandtab = true -- insert spaces instead of tab character
@@ -31,9 +34,6 @@ require("nvim-tree").setup({
   },
 })
 
--- use space+w for window switching 
-vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
-
 -- install packer if not installed already
 local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if not vim.loop.fs_stat(install_path) then
@@ -49,11 +49,22 @@ vim.cmd [[
     autocmd VimEnter * ++nested wincmd w
 ]]
 
+local ok, _ = pcall(vim.cmd, 'colorscheme catppuccin-mocha')
+if not ok then
+  vim.cmd 'colorscheme default'
+end
+
 require('packer').startup(function(use)
   	use 'wbthomason/packer.nvim'
 	use 'sbdchd/neoformat'
 
-use {'iamcco/markdown-preview.nvim'}
+-- markdown preview plugin
+use {
+    'iamcco/markdown-preview.nvim',
+    "catppuccin/nvim", as = "catppuccin"
+}
+
+
 -- tree plugin
 use {
 
