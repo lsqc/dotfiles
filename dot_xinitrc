@@ -3,7 +3,7 @@
 xrdb ~/.Xresources
 
 # start network manager applet
-nm-applet&
+# nm-applet& => removed
 
 setxkbmap eu
 # start notification agent
