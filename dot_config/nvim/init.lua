@@ -1,4 +1,4 @@
--- Bootstrap lazy.nvim
+-- lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -15,9 +15,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -27,10 +24,8 @@ require("lazy").setup({
     -- List of plugins
     { "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
     { "iamcco/markdown-preview.nvim" },
-    { "catppuccin/nvim" },  -- Add the Catppuccin colorscheme
+    { "catppuccin/nvim" },
   },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
@@ -79,7 +74,7 @@ vim.cmd [[
 ]]
 
 -- Set colorscheme (catppuccin-mocha if available, default otherwise)
-local ok, _ = pcall(vim.cmd, 'colorscheme catppuccin-mocha')
+--local ok, _ = pcall(vim.cmd, 'colorscheme catppuccin-mocha')
 if not ok then
   vim.cmd 'colorscheme default'
 end
