@@ -1,0 +1,28 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install
+
+# set theme
+source ~/.zsh/themes/test.zsh
+
+# set neovim as default editor
+export EDITOR=nvim
+
+# CUSTOM ALIASES
+
+# ls 
+alias ls="ls -lsah --color"
+alias ll="ls -l --color"
+
+# fetch
+alias neofetch="hyfetch"
+
+# nvim
+alias vim=nvim
+alias vi=nvim
+
+# vpn
+alias wireup="wg-quick up fsn1"
+alias wiredown="wg-quick down fsn1"
