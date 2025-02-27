@@ -21,7 +21,6 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- List of plugins
     { "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
     { "iamcco/markdown-preview.nvim" },
     { "catppuccin/nvim" },
@@ -30,6 +29,7 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
 
 -- disable mouse
 vim.opt.mouse = ""
