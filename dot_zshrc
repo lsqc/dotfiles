@@ -26,3 +26,4 @@ alias vi=nvim
 # vpn
 alias wireup="wg-quick up fsn1"
 alias wiredown="wg-quick down fsn1"
+source /usr/share/nvm/init-nvm.sh
