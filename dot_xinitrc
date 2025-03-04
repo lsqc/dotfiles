@@ -22,4 +22,4 @@ lxsession &
 blueman-applet &
 
 # start window manager
-exec i3
+exec dwm
