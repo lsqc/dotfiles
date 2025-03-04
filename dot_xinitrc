@@ -5,7 +5,15 @@ xrdb ~/.Xresources
 # start network manager applet
 # nm-applet& => removed
 
+# set wallpaper
+feh --bg-fill .local/share/wallpapers/latest.png & 
+
+# start compositor
+picom &
+
+# set keyboard layout 
 setxkbmap eu
+
 # start notification agent
 /usr/lib/notification-daemon-1.0/notification-daemon &
 
