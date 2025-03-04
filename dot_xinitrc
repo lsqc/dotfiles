@@ -5,11 +5,17 @@ xrdb ~/.Xresources
 # start network manager applet
 # nm-applet& => removed
 
+# set trackpoint speed
+./repos/dotfiles/scripts/trackpad-config.sh
+
 # set wallpaper
 feh --bg-fill .local/share/wallpapers/latest.png & 
 
 # start compositor
 picom &
+
+# start slstatus
+slstatus &
 
 # set keyboard layout 
 setxkbmap eu
