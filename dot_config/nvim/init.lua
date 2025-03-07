@@ -119,3 +119,6 @@ map('n', '<Space>c', '<Cmd>BufferClose<CR>', opts)
 
 -- Magic buffer-picking mode
 
+
+-- hotkey for leaving terminal mode
+vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
