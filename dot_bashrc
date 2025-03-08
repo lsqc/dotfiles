@@ -10,6 +10,8 @@ export EDITOR=nvim
 alias vim='nvim'
 alias vi='nvim'
 
+alias slmake='sudo make clean install'
+
 alias wireup='sudo wg-quick up fsn1'
 alias wiredown='sudo wg-quick down fsn1'
 
