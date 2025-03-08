@@ -1,3 +1,6 @@
+vim.g.loaded_netrw       = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -75,9 +78,15 @@ require("nvim-tree").setup({
   },
 })
 
--- open NvimTree on start
+local function open_nvim_tree()
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
 vim.cmd [[
-    autocmd VimEnter * NvimTreeOpen
     autocmd VimEnter * ++nested wincmd w
 ]]
 
