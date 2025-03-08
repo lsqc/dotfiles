@@ -96,6 +96,14 @@ if not ok then
   vim.cmd 'colorscheme default'
 end
 
+-- override theme background color with terminal default
+vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
+
+-- set nvimtree background
+vim.cmd('highlight NvimTreeNormal guibg=NONE ctermbg=NONE')
+vim.cmd('highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE')
+
+
 -- hotkeys
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -125,8 +133,6 @@ map('n', '<Space>p', '<Cmd>BufferPin<CR>', opts)
 
 -- Close buffer
 map('n', '<Space>c', '<Cmd>BufferClose<CR>', opts)
-
--- Magic buffer-picking mode
 
 
 -- hotkey for leaving terminal mode
