@@ -1,0 +1,14 @@
+# GitLab.com
+Host gitlab.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/gitlabkey
+
+# GitHub.com
+Host github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_ed25519
+
+# git.lsdevcloud.com
+Host git.lsdevcloud.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/gitkeys/git.lsdevcloud.com
