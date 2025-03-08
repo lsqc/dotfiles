@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+vim.g.loaded_netrw       = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- disable mouse
+vim.opt.mouse = ""
+
+>>>>>>> origin/t440p
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -13,6 +22,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/t440p
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
@@ -38,10 +51,13 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
 })
+<<<<<<< HEAD
 
 -- disable mouse
 vim.opt.mouse = ""
 
+=======
+>>>>>>> origin/t440p
 -- nvim tree toggle
 vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
@@ -75,9 +91,21 @@ require("nvim-tree").setup({
   },
 })
 
+<<<<<<< HEAD
 -- open NvimTree on start
 vim.cmd [[
     autocmd VimEnter * NvimTreeOpen
+=======
+local function open_nvim_tree()
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
+vim.cmd [[
+>>>>>>> origin/t440p
     autocmd VimEnter * ++nested wincmd w
 ]]
 
@@ -87,6 +115,17 @@ if not ok then
   vim.cmd 'colorscheme default'
 end
 
+<<<<<<< HEAD
+=======
+-- override theme background color with terminal default
+vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
+
+-- set nvimtree background
+vim.cmd('highlight NvimTreeNormal guibg=NONE ctermbg=NONE')
+vim.cmd('highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE')
+
+
+>>>>>>> origin/t440p
 -- hotkeys
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -117,5 +156,11 @@ map('n', '<Space>p', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
 map('n', '<Space>c', '<Cmd>BufferClose<CR>', opts)
 
+<<<<<<< HEAD
 -- Magic buffer-picking mode
 
+=======
+
+-- hotkey for leaving terminal mode
+vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
+>>>>>>> origin/t440p
