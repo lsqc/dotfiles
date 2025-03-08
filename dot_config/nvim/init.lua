@@ -1,3 +1,9 @@
+vim.g.loaded_netrw       = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- disable mouse
+vim.opt.mouse = ""
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -13,6 +19,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
@@ -38,10 +45,6 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
 })
-
--- disable mouse
-vim.opt.mouse = ""
-
 -- nvim tree toggle
 vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
@@ -75,9 +78,15 @@ require("nvim-tree").setup({
   },
 })
 
--- open NvimTree on start
+local function open_nvim_tree()
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
 vim.cmd [[
-    autocmd VimEnter * NvimTreeOpen
     autocmd VimEnter * ++nested wincmd w
 ]]
 
@@ -86,6 +95,14 @@ local ok, _ = pcall(vim.cmd, 'colorscheme catppuccin-mocha')
 if not ok then
   vim.cmd 'colorscheme default'
 end
+
+-- override theme background color with terminal default
+vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
+
+-- set nvimtree background
+vim.cmd('highlight NvimTreeNormal guibg=NONE ctermbg=NONE')
+vim.cmd('highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE')
+
 
 -- hotkeys
 local map = vim.api.nvim_set_keymap
@@ -116,8 +133,6 @@ map('n', '<Space>p', '<Cmd>BufferPin<CR>', opts)
 
 -- Close buffer
 map('n', '<Space>c', '<Cmd>BufferClose<CR>', opts)
-
--- Magic buffer-picking mode
 
 
 -- hotkey for leaving terminal mode
