@@ -5,17 +5,25 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# set editor
 export EDITOR=nvim
 
+# nvim alias
 alias vim='nvim'
 alias vi='nvim'
 
+# alias for suckless make
 alias slmake='sudo make clean install'
 
+# vpn
 alias wireup='sudo wg-quick up fsn1'
 alias wiredown='sudo wg-quick down fsn1'
 
 alias ls='ls -lsa --color=auto'
+
 alias grep='grep --color=auto'
+
+# update alias
+alias pacsyu='sudo pacman -Syu'
 
 export PS1="\[$(tput setaf 42)\]\w \[$(tput setaf 33)\]❯ \[$(tput setaf 14)\]\[$(tput sgr0)\]"
