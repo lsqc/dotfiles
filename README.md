@@ -8,7 +8,7 @@
 - wallpaper manager: wallpaperutil (<a href="https://github.com/lsdevcloud/wallpaperutil">https://github.com/lsdevcloud/wallpaperutil</a>)
 - shell: bash 
 - editor: neovim (<a href="https://neovim.io/">https://neovim.io/</a>)
-<i>(credits for tmux config: <a href="https://github.com/wubbl0rz/">wubbl0rz</a>)</i>
+- <i>(credits for tmux config: <a href="https://github.com/wubbl0rz/">wubbl0rz</a>)</i>
 
 # alacritty
 
