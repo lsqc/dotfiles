@@ -1,25 +1,11 @@
-<<<<<<< HEAD
+-- Disable netrw (duplicate lines removed)
 vim.g.loaded_netrw = 1
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/t440p
-vim.g.loaded_netrw       = 1
->>>>>>> origin/master
 vim.g.loaded_netrwPlugin = 1
 
+-- Disable mouse
 vim.opt.mouse = ""
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/t440p
->>>>>>> origin/t440p
 -- Bootstrap lazy.nvim
->>>>>>> origin/master
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -34,22 +20,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/t440p
->>>>>>> origin/t440p
->>>>>>> origin/master
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Setup lazy.nvim
 require("lazy").setup({
   spec = {
     { "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
@@ -70,41 +46,16 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
 })
-<<<<<<< HEAD
 
+-- Tab indent configuration
 vim.o.tabstop = 4
 vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
--- disable mouse
-vim.opt.mouse = ""
-
-=======
->>>>>>> origin/t440p
->>>>>>> origin/t440p
--- nvim tree toggle
-vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-
--- use space+w for window switching
-vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
-
--- tab indent configuration
-vim.o.tabstop = 4 -- set tab character to 4 spaces
-vim.o.expandtab = true -- insert spaces instead of tab character
-vim.o.softtabstop = 4 -- amount of spaces inserted (replaces tab character)
-vim.o.shiftwidth = 4 -- amount of spaces inserted when indenting
-
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
->>>>>>> origin/master
 
 vim.opt.termguicolors = true
 
+-- Config for nvim-tree
 require("nvim-tree").setup({
   sort = {
     sorter = "case_sensitive",
@@ -120,70 +71,23 @@ require("nvim-tree").setup({
   },
 })
 
-<<<<<<< HEAD
+-- Open NvimTree on start
 vim.cmd [[autocmd VimEnter * NvimTreeOpen]]
 
-=======
-<<<<<<< HEAD
-local function open_nvim_tree()
-
-  -- open the tree
-  require("nvim-tree.api").tree.open()
-end
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
-
-vim.cmd [[
-=======
-<<<<<<< HEAD
--- open NvimTree on start
-vim.cmd [[
-    autocmd VimEnter * NvimTreeOpen
-=======
-local function open_nvim_tree()
-
-  -- open the tree
-  require("nvim-tree.api").tree.open()
-end
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
-
-vim.cmd [[
->>>>>>> origin/t440p
->>>>>>> origin/t440p
-    autocmd VimEnter * ++nested wincmd w
-]]
-
 -- Set colorscheme (catppuccin-mocha if available, default otherwise)
->>>>>>> origin/master
 local ok, _ = pcall(vim.cmd, 'colorscheme catppuccin-mocha')
 if not ok then
   vim.cmd 'colorscheme default'
 end
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/t440p
--- override theme background color with terminal default
->>>>>>> origin/master
+-- Override theme background color with terminal default
 vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
 
+-- Set NvimTree background
 vim.cmd('highlight NvimTreeNormal guibg=NONE ctermbg=NONE')
 vim.cmd('highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE')
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/t440p
->>>>>>> origin/t440p
--- hotkeys
->>>>>>> origin/master
+-- Key mappings (buffer management)
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -206,22 +110,6 @@ map('n', '<Space>0', '<Cmd>BufferLast<CR>', opts)
 map('n', '<Space>p', '<Cmd>BufferPin<CR>', opts)
 map('n', '<Space>c', '<Cmd>BufferClose<CR>', opts)
 
-<<<<<<< HEAD
+-- Hotkey for leaving terminal mode
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
 
-=======
-<<<<<<< HEAD
-
--- hotkey for leaving terminal mode
-vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
-=======
-<<<<<<< HEAD
--- Magic buffer-picking mode
-
-=======
-
--- hotkey for leaving terminal mode
-vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
->>>>>>> origin/t440p
->>>>>>> origin/t440p
->>>>>>> origin/master
