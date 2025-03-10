@@ -5,6 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# run startx if on first tty
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
+
 # set editor
 export EDITOR=nvim
 
@@ -23,7 +28,8 @@ alias ls='ls -lsa --color=auto'
 
 alias grep='grep --color=auto'
 
-# update alias
+# alias for pacman update
 alias pacsyu='sudo pacman -Syu'
 
+# set prompt
 export PS1="\[$(tput setaf 42)\]\w \[$(tput setaf 33)\]❯ \[$(tput setaf 14)\]\[$(tput sgr0)\]"
