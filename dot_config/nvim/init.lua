@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/t440p
 vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- disable mouse
 vim.opt.mouse = ""
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/t440p
->>>>>>> origin/t440p
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -28,14 +19,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/t440p
->>>>>>> origin/t440p
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
@@ -61,17 +44,9 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
 })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
 -- disable mouse
 vim.opt.mouse = ""
 
-=======
->>>>>>> origin/t440p
->>>>>>> origin/t440p
--- nvim tree toggle
 vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 -- use space+w for window switching
@@ -104,7 +79,6 @@ require("nvim-tree").setup({
   },
 })
 
-<<<<<<< HEAD
 local function open_nvim_tree()
 
   -- open the tree
@@ -113,13 +87,9 @@ end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
-vim.cmd [[
-=======
-<<<<<<< HEAD
 -- open NvimTree on start
 vim.cmd [[
-    autocmd VimEnter * NvimTreeOpen
-=======
+    autocmd VimEnter * NvimTreeOpen ]]
 local function open_nvim_tree()
 
   -- open the tree
@@ -129,8 +99,6 @@ end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 vim.cmd [[
->>>>>>> origin/t440p
->>>>>>> origin/t440p
     autocmd VimEnter * ++nested wincmd w
 ]]
 
@@ -140,11 +108,6 @@ if not ok then
   vim.cmd 'colorscheme default'
 end
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/t440p
 -- override theme background color with terminal default
 vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
 
@@ -152,11 +115,6 @@ vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
 vim.cmd('highlight NvimTreeNormal guibg=NONE ctermbg=NONE')
 vim.cmd('highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE')
 
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/t440p
->>>>>>> origin/t440p
 -- hotkeys
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -187,17 +145,10 @@ map('n', '<Space>p', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
 map('n', '<Space>c', '<Cmd>BufferClose<CR>', opts)
 
-<<<<<<< HEAD
-
 -- hotkey for leaving terminal mode
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
-=======
-<<<<<<< HEAD
 -- Magic buffer-picking mode
 
-=======
 
 -- hotkey for leaving terminal mode
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
->>>>>>> origin/t440p
->>>>>>> origin/t440p
