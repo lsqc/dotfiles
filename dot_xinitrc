@@ -26,6 +26,9 @@ setxkbmap eu
 # start polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
+# set kitty directory
+export KITTY_CONFIG_DIRECTORY="~/repos/dotfiles/dot_config/kitty" & 
+
 # start picom
 picom --config ~/.config/picom.conf &
 
