@@ -8,6 +8,9 @@ xrdb ~/.Xresources
 # set trackpoint speed
 ./repos/dotfiles/scripts/trackpad-config.sh
 
+# set default browser
+xdg-settings set default-web-browser librewolf.desktop 
+
 # set wallpaper
 feh --bg-fill .local/share/wallpapers/latest.png & 
 
