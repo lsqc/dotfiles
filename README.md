@@ -12,7 +12,7 @@
 
 <i>(credits for tmux config: <a href="https://github.com/wubbl0rz/">wubbl0rz</a>)</i>
 
-# alacritty
+#### alacritty
 
 themes: <a href="https://github.com/alacritty/alacritty-theme">https://github.com/alacritty/alacritty-theme</a>
 
