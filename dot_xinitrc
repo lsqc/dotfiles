@@ -8,6 +8,9 @@ xrdb ~/.Xresources
 # set trackpoint speed
 ./repos/dotfiles/scripts/trackpad-config.sh
 
+# set monitor resolution and alignment
+~/repos/dotfiles/scripts/monitor-maxres.sh &
+
 # set default browser
 xdg-settings set default-web-browser librewolf.desktop 
 
