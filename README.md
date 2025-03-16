@@ -2,7 +2,7 @@
 
 ## used software
 - 🔧 window manager: dwm (<a href="https://github.com/lsdevcloud/dwm">https://github.com/lsdevcloud/dwm</a>)
-- 💲 terminal: alacritty (<a href="https://github.com/alacritty/alacritty">https://github.com/alacritty/alacritty</a>)
+- 💲 terminal: kitty (<a href="https://sw.kovidgoyal.net/kitty/">https://sw.kovidgoyal.net/kitty/</a>) <b>or</b> st (<a href="https://github.com/lsdevcloud/st">https://github.com/lsdevcloud/st</a>) -> customized version
 - 🪟 compositor: picom (<a href="https://github.com/yshui/picom">https://github.com/yshui/picom</a>)
 - 🚀 app launcher: rofi (<a href="https://github.com/davatorium/rofi">https://github.com/davatorium/rofi</a>)
 - 🖼️ wallpaper manager: wallpaperutil (<a href="https://github.com/lsdevcloud/wallpaperutil">https://github.com/lsdevcloud/wallpaperutil</a>)
