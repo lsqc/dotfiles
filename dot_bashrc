@@ -34,5 +34,7 @@ alias grep='grep --color=auto'
 # alias for pacman update
 alias pacsyu='sudo pacman -Syu'
 
+export TERM=xterm-256color
+
 # set prompt
 export PS1="\[$(tput setaf 42)\]\w \[$(tput setaf 33)\]❯ \[$(tput setaf 14)\]\[$(tput sgr0)\]"
