@@ -6,10 +6,10 @@ xrdb ~/.Xresources
 # nm-applet& => removed
 
 # set trackpoint speed
-./repos/dotfiles/scripts/trackpad-config.sh
+~/repos/dotfiles/scripts/trackpad-config.sh
 
 # set monitors
-/home/leo/repos/dotfiles/scripts/monitor-maxres.sh & 
+~/repos/dotfiles/scripts/monitor-maxres.sh & 
 
 # set wallpaper
 feh --bg-fill .local/share/wallpapers/latest.png & 
