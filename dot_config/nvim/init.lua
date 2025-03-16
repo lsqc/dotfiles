@@ -163,3 +163,10 @@ vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = 
 
 -- hotkey for leaving terminal mode
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
+
+-- used for navigation between windows 
+vim.api.nvim_set_keymap('n', '<Space>h', '<C-w>h', { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap('n', '<Space>j', '<C-w>j', { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap('n', '<Space>k', '<C-w>k', { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap('n', '<Space>l', '<C-w>l', { noremap = true, silent = true }) 
+
