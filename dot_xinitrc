@@ -8,6 +8,9 @@ xrdb ~/.Xresources
 # set trackpoint speed
 ./repos/dotfiles/scripts/trackpad-config.sh
 
+# set monitors
+/home/leo/repos/dotfiles/scripts/monitor-maxres.sh & 
+
 # set wallpaper
 feh --bg-fill .local/share/wallpapers/latest.png & 
 
@@ -24,13 +27,16 @@ setxkbmap eu
 /usr/lib/notification-daemon-1.0/notification-daemon &
 
 # start polkit
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # set kitty directory
 export KITTY_CONFIG_DIRECTORY="~/repos/dotfiles/dot_config/kitty" & 
 
 # start picom
 picom --config ~/.config/picom.conf &
+
+# set term env variable
+export TERM=xterm-256color
 
 # start lxsession
 lxsession &
