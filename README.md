@@ -1,11 +1,11 @@
 # dotfiles
 
 ## used software
-- 🔧 window manager: dwm (<a href="https://github.com/lsdevcloud/dwm">https://github.com/lsdevcloud/dwm</a>)
-- 💲 terminal: st (<a href="https://github.com/lsdevcloud/st-transparency">https://github.com/lsdevcloud/st-transparency</a>) -> customized version
+- 🔧 window manager: dwm (<a href="https://github.com/lsqc/dwm">https://github.com/lsqc/dwm</a>)
+- 💲 terminal: st (<a href="https://github.com/lsqc/st-transparency">https://github.com/lsqc/st-transparency</a>) -> customized version
 - 🪟 compositor: picom (<a href="https://github.com/yshui/picom">https://github.com/yshui/picom</a>)
 - 🚀 app launcher: rofi (<a href="https://github.com/davatorium/rofi">https://github.com/davatorium/rofi</a>)
-- 🖼️ wallpaper manager: wallpaperutil (<a href="https://github.com/lsdevcloud/wallpaperutil">https://github.com/lsdevcloud/wallpaperutil</a>)
+- 🖼️ wallpaper manager: wallpaperutil (<a href="https://github.com/lsqc/wallpaperutil">https://github.com/lsqc/wallpaperutil</a>)
 - 🐚 shell: bash (<a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a>) 
 - 📝 editor: neovim (<a href="https://neovim.io/">https://neovim.io/</a>)
 - 🌍 web browser: librewolf (<a href='https://librewolf.net'>https://librewolf.net/</a>)
