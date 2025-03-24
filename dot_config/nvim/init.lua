@@ -170,3 +170,8 @@ vim.api.nvim_set_keymap('n', '<Space>j', '<C-w>j', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '<Space>k', '<C-w>k', { noremap = true, silent = true }) 
 vim.api.nvim_set_keymap('n', '<Space>l', '<C-w>l', { noremap = true, silent = true }) 
 
+vim.api.nvim_set_keymap('n', '<Space><S-h>', '<C-w>H', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space><S-j>', '<C-w>J', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space><S-k>', '<C-w>K', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space><S-l>', '<C-w>L', { noremap = true, silent = true })
+
