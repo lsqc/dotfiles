@@ -175,3 +175,6 @@ vim.api.nvim_set_keymap('n', '<Space><S-j>', '<C-w>J', { noremap = true, silent 
 vim.api.nvim_set_keymap('n', '<Space><S-k>', '<C-w>K', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space><S-l>', '<C-w>L', { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap('n', '<Home>', '^', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<End>', '$', { noremap = true, silent = true })
+
