@@ -99,8 +99,8 @@ end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 -- open NvimTree on start
-vim.cmd [[
-    autocmd VimEnter * NvimTreeOpen ]]
+vim.cmd [[ autocmd VimEnter * NvimTreeOpen ]]
+
 local function open_nvim_tree()
 
   -- open the tree
@@ -109,15 +109,17 @@ end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
-vim.cmd [[
-    autocmd VimEnter * ++nested wincmd w
-]]
+vim.cmd [[ autocmd VimEnter * ++nested wincmd w ]]
 
 -- Set colorscheme (catppuccin-mocha if available, default otherwise)
 local ok, _ = pcall(vim.cmd, 'colorscheme catppuccin-mocha')
 if not ok then
   vim.cmd 'colorscheme default'
 end
+
+-- relative line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- override theme background color with terminal default
 vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
@@ -158,11 +160,6 @@ map('n', '<Space>c', '<Cmd>BufferClose<CR>', opts)
 
 -- hotkey for leaving terminal mode
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
--- Magic buffer-picking mode
-
-
--- hotkey for leaving terminal mode
-vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
 
 -- used for navigation between windows 
 vim.api.nvim_set_keymap('n', '<Space>h', '<C-w>h', { noremap = true, silent = true }) 
@@ -177,4 +174,5 @@ vim.api.nvim_set_keymap('n', '<Space><S-l>', '<C-w>L', { noremap = true, silent 
 
 vim.api.nvim_set_keymap('n', '<Home>', '^', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<End>', '$', { noremap = true, silent = true })
+
 
