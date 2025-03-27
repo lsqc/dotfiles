@@ -19,12 +19,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Setup lazy.nvim
+-- setup lazy.nvim
 require("lazy").setup({
   spec = {
     { "nvim-treesitter/nvim-treesitter",
@@ -55,13 +56,9 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
 })
+
 -- disable mouse
 vim.opt.mouse = ""
-
-vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-
--- use space+w for window switching
-vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
 
 -- tab indent configuration
 vim.o.tabstop = 4 -- set tab character to 4 spaces
@@ -131,6 +128,11 @@ vim.cmd('highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE')
 -- hotkeys
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+
+vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
+-- use space+w for window switching
+vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
 
 -- Move to previous/next
 map('n', '<Space>,', '<Cmd>BufferPrevious<CR>', opts)
