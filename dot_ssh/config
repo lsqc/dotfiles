@@ -8,6 +8,10 @@ Host github.com
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/gitkey
 
+Host git.ha.si
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/gitkey
+
 # git.lsdevcloud.com
 Host git.lsdevcloud.com
     PreferredAuthentications publickey

@@ -19,12 +19,23 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/t440p
+=======
+
+>>>>>>> 26892a9 (neovim: cleanup)
+>>>>>>> ff17488 (neovim: cleanup)
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Setup lazy.nvim
+-- setup lazy.nvim
 require("lazy").setup({
   spec = {
     { "nvim-treesitter/nvim-treesitter",
@@ -55,14 +66,31 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
 })
+<<<<<<< HEAD
 -- disable mouse
 vim.opt.mouse = ""
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 26892a9 (neovim: cleanup)
+
+-- disable mouse
+vim.opt.mouse = ""
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/t440p
+-- nvim tree toggle
+>>>>>>> ff17488 (neovim: cleanup)
 vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 -- use space+w for window switching
 vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
 
+=======
+>>>>>>> 26892a9 (neovim: cleanup)
 -- tab indent configuration
 vim.o.tabstop = 4 -- set tab character to 4 spaces
 vim.o.expandtab = true -- insert spaces instead of tab character
@@ -129,6 +157,11 @@ vim.cmd('highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE')
 -- hotkeys
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+
+vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
+-- use space+w for window switching
+vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
 
 -- Move to previous/next
 map('n', '<Space>,', '<Cmd>BufferPrevious<CR>', opts)
