@@ -19,17 +19,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/t440p
-=======
-
->>>>>>> 26892a9 (neovim: cleanup)
->>>>>>> ff17488 (neovim: cleanup)
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
@@ -66,31 +56,10 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
 })
-<<<<<<< HEAD
--- disable mouse
-vim.opt.mouse = ""
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 26892a9 (neovim: cleanup)
 
 -- disable mouse
 vim.opt.mouse = ""
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/t440p
--- nvim tree toggle
->>>>>>> ff17488 (neovim: cleanup)
-vim.api.nvim_set_keymap('n', '<Space>t', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-
--- use space+w for window switching
-vim.api.nvim_set_keymap('n', '<Space>w', '<C-w>w', { noremap = true, silent = true })
-
-=======
->>>>>>> 26892a9 (neovim: cleanup)
 -- tab indent configuration
 vim.o.tabstop = 4 -- set tab character to 4 spaces
 vim.o.expandtab = true -- insert spaces instead of tab character
@@ -127,8 +96,8 @@ end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 -- open NvimTree on start
-vim.cmd [[
-    autocmd VimEnter * NvimTreeOpen ]]
+vim.cmd [[ autocmd VimEnter * NvimTreeOpen ]]
+
 local function open_nvim_tree()
 
   -- open the tree
@@ -137,15 +106,17 @@ end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
-vim.cmd [[
-    autocmd VimEnter * ++nested wincmd w
-]]
+vim.cmd [[ autocmd VimEnter * ++nested wincmd w ]]
 
 -- Set colorscheme (catppuccin-mocha if available, default otherwise)
 local ok, _ = pcall(vim.cmd, 'colorscheme catppuccin-mocha')
 if not ok then
   vim.cmd 'colorscheme default'
 end
+
+-- relative line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- override theme background color with terminal default
 vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
@@ -198,8 +169,12 @@ vim.api.nvim_set_keymap('n', '<Space>j', '<C-w>j', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '<Space>k', '<C-w>k', { noremap = true, silent = true }) 
 vim.api.nvim_set_keymap('n', '<Space>l', '<C-w>l', { noremap = true, silent = true }) 
 
--- used for moving windows
 vim.api.nvim_set_keymap('n', '<Space><S-h>', '<C-w>H', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space><S-j>', '<C-w>J', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space><S-k>', '<C-w>K', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space><S-l>', '<C-w>L', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<Home>', '^', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<End>', '$', { noremap = true, silent = true })
+
+
