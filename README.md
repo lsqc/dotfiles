@@ -12,6 +12,7 @@
 
 # alacritty
 
+used font: https://github.com/shannpersand/comic-shanns
 themes: <a href="https://github.com/alacritty/alacritty-theme">https://github.com/alacritty/alacritty-theme</a>
 
 ## Licensed under the terms and conditions of the GNU General Public License v3. (see `LICENSE` for details)
