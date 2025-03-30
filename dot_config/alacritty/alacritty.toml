@@ -1,1 +1,11 @@
-/home/leo/.config/alacritty/alacritty.toml
+[font]
+size = 11
+
+[font.normal]
+#family = "Comic Code Ligatures"
+family = "Comic Shanns Regular"
+
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/hyper.toml",
+]
