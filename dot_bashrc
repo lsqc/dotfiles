@@ -27,6 +27,8 @@ alias slmake='sudo make clean install'
 alias wireup='sudo wg-quick up fsn1'
 alias wiredown='sudo wg-quick down fsn1'
 
+alias suicide="shutdown now"
+
 alias ls='ls -lsa --color=auto'
 
 alias grep='grep --color=auto'

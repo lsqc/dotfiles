@@ -45,4 +45,4 @@ lxsession &
 blueman-applet &
 
 # start window manager
-exec dwm
+exec bspwm
