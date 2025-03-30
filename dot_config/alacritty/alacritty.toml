@@ -2,12 +2,7 @@
 size = 11
 
 [font.normal]
-<<<<<<< HEAD
-family = "Comic Code Ligatures"
-=======
-#family = "Comic Code Ligatures"
 family = "Comic Shanns Regular"
->>>>>>> 440979e (alacritty: fix file type)
 
 [general]
 import = [
