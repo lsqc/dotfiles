@@ -6,6 +6,10 @@
 super + Return
 	alacritty
 
+# lock screen
+super + {_,shift + }l
+    betterlockscreen -l dimblur --span
+
 # program launcher
 super + d
 	rofi -show drun -show-icons
