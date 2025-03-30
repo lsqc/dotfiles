@@ -199,16 +199,16 @@ map('n', '<Space>8', '<Cmd>BufferGoto 8<CR>', opts)
 map('n', '<Space>9', '<Cmd>BufferGoto 9<CR>', opts)
 map('n', '<Space>0', '<Cmd>BufferLast<CR>', opts)
 
--- Pin/unpin buffer
+-- pin/unpin buffer
 map('n', '<Space>p', '<Cmd>BufferPin<CR>', opts)
 
--- Close buffer
+-- close buffer
 map('n', '<Space>c', '<Cmd>BufferClose<CR>', opts)
 
 -- hotkey for leaving terminal mode
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
 
--- used for navigation between windows 
+-- used for navigating between windows 
 vim.api.nvim_set_keymap('n', '<Space>h', '<C-w>h', { noremap = true, silent = true }) 
 vim.api.nvim_set_keymap('n', '<Space>j', '<C-w>j', { noremap = true, silent = true }) 
 vim.api.nvim_set_keymap('n', '<Space>k', '<C-w>k', { noremap = true, silent = true }) 

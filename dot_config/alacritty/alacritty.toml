@@ -2,7 +2,8 @@
 size = 11
 
 [font.normal]
-family = "Comic Code Ligatures"
+#family = "Comic Code Ligatures"
+family = "Comic Shanns Regular"
 
 [general]
 import = [
