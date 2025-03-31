@@ -1,4 +1,3 @@
-
 # load settings from Xresources
 xrdb ~/.Xresources
 
@@ -45,4 +44,4 @@ lxsession &
 blueman-applet &
 
 # start window manager
-exec bspwm
+exec i3
