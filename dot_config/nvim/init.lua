@@ -222,4 +222,14 @@ vim.api.nvim_set_keymap('n', '<Space><S-l>', '<C-w>L', { noremap = true, silent 
 vim.api.nvim_set_keymap('n', '<Home>', '^', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<End>', '$', { noremap = true, silent = true })
 
+-- used for toggling line numbers 
+vim.keymap.set('n', '<Space>l', function()
+  if vim.wo.number then
+    vim.wo.number = false
+    vim.wo.relativenumber = false
+  else
+    vim.wo.number = true
+    vim.wo.relativenumber = true
+  end
+end, { desc = 'Toggle line numbers' })
 
