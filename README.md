@@ -1,5 +1,8 @@
 # dotfiles
 
+## used font
+- https://github.com/shannpersand/comic-shanns
+
 ## used software
 - window manager: dwm (<a href="https://github.com/lsdevcloud/dwm">https://github.com/lsdevcloud/dwm</a>)
 - terminal: alacritty (<a href="https://github.com/alacritty/alacritty">https://github.com/alacritty/alacritty</a>)
@@ -11,8 +14,6 @@
 - <i>(credits for tmux config: <a href="https://github.com/wubbl0rz/">wubbl0rz</a>)</i>
 
 # alacritty
+- themes: <a href="https://github.com/alacritty/alacritty-theme">https://github.com/alacritty/alacritty-theme</a>
 
-used font: https://github.com/shannpersand/comic-shanns
-themes: <a href="https://github.com/alacritty/alacritty-theme">https://github.com/alacritty/alacritty-theme</a>
-
-## Licensed under the terms and conditions of the GNU General Public License v3. (see `LICENSE` for details)
+### Licensed under the terms and conditions of the GNU General Public License v3. (see `LICENSE` for details)
