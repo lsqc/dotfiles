@@ -41,9 +41,30 @@ require("lazy").setup({
     end},
     -- bottom status line 
     { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
+    -- file tree
     { "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
-    { "iamcco/markdown-preview.nvim" },
+    { "neovim/nvim-lspconfig", -- REQUIRED: for native Neovim LSP   integration
+        lazy = false, -- REQUIRED: tell lazy.nvim to start this plugin at startup
+        dependencies = {
+            -- main one
+            { "ms-jpq/coq_nvim", branch = "coq" },
+            -- 9000+ Snippets
+            --{ "ms-jpq/coq.artifacts", branch = "artifacts" },
+            -- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
+            -- Need to **configure separately**
+            { 'ms-jpq/coq.thirdparty', branch = "3p" }
+        },
+        init = function()
+            vim.g.coq_settings = {
+            auto_start = true, -- if you want to start COQ at startup
+        }
+        end,
+        config = function()
+        end,
+    },
+    -- theme
     { "catppuccin/nvim" },  -- Add the Catppuccin colorscheme
+    --top bar
     { "romgrk/barbar.nvim",
         dependencies = {
             'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
