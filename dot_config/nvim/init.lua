@@ -223,7 +223,7 @@ vim.api.nvim_set_keymap('n', '<Home>', '^', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<End>', '$', { noremap = true, silent = true })
 
 -- used for toggling line numbers 
-vim.keymap.set('n', '<Space>l', function()
+vim.keymap.set('n', '<Space>q', function()
   if vim.wo.number then
     vim.wo.number = false
     vim.wo.relativenumber = false
