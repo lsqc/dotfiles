@@ -8,15 +8,10 @@ Host github.com
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/gitkey
 
-<<<<<<< HEAD
-# git.lsdevcloud.com
-Host git.lsdevcloud.com
-=======
 Host git.ha.si
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/gitkey
 
 Host git.lsdevcloud.net
->>>>>>> 71f26c5 (ssh config: update personal git server address)
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/gitkey
