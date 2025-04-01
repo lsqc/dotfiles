@@ -243,6 +243,9 @@ vim.api.nvim_set_keymap('n', '<Space><S-l>', '<C-w>L', { noremap = true, silent 
 vim.api.nvim_set_keymap('n', '<Home>', '^', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<End>', '$', { noremap = true, silent = true })
 
+-- quits vim instantly
+vim.api.nvim_set_keymap('n', '<Space>e', ':qa!<CR>', { noremap = true, silent = true })
+
 -- used for toggling line numbers 
 vim.keymap.set('n', '<Space>q', function()
   if vim.wo.number then
