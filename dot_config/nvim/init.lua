@@ -28,6 +28,7 @@ vim.g.maplocalleader = "\\"
 -- setup lazy.nvim
 require("lazy").setup({
   spec = {
+    { "shaunsingh/nord.nvim" },
     { "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function () 
@@ -63,7 +64,7 @@ require("lazy").setup({
         end,
     },
     -- theme
-    { "catppuccin/nvim" },  -- Add the Catppuccin colorscheme
+    --{ "catppuccin/nvim" },  -- Add the Catppuccin colorscheme
     --top bar
     { "romgrk/barbar.nvim",
         dependencies = {
@@ -175,7 +176,7 @@ require('lualine').setup {
 }
 
 -- Set colorscheme (catppuccin-mocha if available, default otherwise)
-local ok, _ = pcall(vim.cmd, 'colorscheme catppuccin-mocha')
+local ok, _ = pcall(vim.cmd, 'colorscheme nord')
 if not ok then
   vim.cmd 'colorscheme default'
 end
