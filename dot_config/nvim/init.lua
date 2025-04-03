@@ -111,6 +111,16 @@ require("nvim-tree").setup({
   },
 })
 
+-- set path
+vim.opt.path:append("**")
+vim.opt.path:append(".")
+
+-- register auto cmd on buffer switch
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "*",
+    command = "set path+=**"
+})
+
 local function open_nvim_tree()
 
   -- open the tree
