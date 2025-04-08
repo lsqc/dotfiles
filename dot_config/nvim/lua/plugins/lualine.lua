@@ -5,7 +5,7 @@ require("lualine").setup({
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     always_show_tabline = true,
-    globalstatus = false,
+    globalstatus = true,
     refresh = {
       statusline = 100,
       tabline = 100,
