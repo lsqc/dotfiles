@@ -10,9 +10,6 @@ if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]
   exec startx
 fi
 
-# alias for displaying images in terminal
-alias icat="kitten icat"
-
 # set editor
 export EDITOR=nvim
 
@@ -30,6 +27,9 @@ alias wiredown='sudo wg-quick down fsn1'
 alias suicide="shutdown now"
 
 alias ls='ls -lsa --color=auto'
+
+# set alias for neofetch
+alias neofetch="hyfetch"
 
 alias grep='grep --color=auto'
 
