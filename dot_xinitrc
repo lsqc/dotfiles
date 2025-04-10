@@ -1,29 +1,10 @@
-
 # load settings from Xresources
 xrdb ~/.Xresources
 
 # start network manager applet
-# nm-applet& => removed
+nm-applet&
 
-# set trackpoint speed
-./repos/dotfiles/scripts/trackpad-config.sh
-
-# set monitor resolution and alignment
-~/repos/dotfiles/scripts/monitor-maxres.sh &
-
-# set default browser
-xdg-settings set default-web-browser librewolf.desktop 
-
-# set wallpaper
-feh --bg-fill .local/share/wallpapers/latest.png & 
-
-# start compositor
-picom &
-
-# start slstatus
-slstatus &
-
-# set keyboard layout 
+# set keymap
 setxkbmap eu
 
 # start notification agent
@@ -41,5 +22,11 @@ lxsession &
 # start bluetooth applet
 blueman-applet &
 
+# set background
+feh --bg-fill .local/share/wallpapers/latest.png &
+
+# start polybar
+polybar &
+
 # start window manager
-exec dwm
+exec i3
