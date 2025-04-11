@@ -171,7 +171,7 @@ bindsym $mod+Shift+F11 move container to workspace number $ws21
 bindsym $mod+Shift+F12 move container to workspace number $ws22
 
 # screenshot hotkey
-bindsym Shift+Print exec --no-startup-id /bin/bash -c '~/repos/dotfiles/scripts/screenshot.sh >> /home/leo/screenshot.log 2>&1'
+bindsym Shift+Print exec --no-startup-id /bin/bash -c '~/repos/dotfiles/scripts/screenshot.sh >> ~/screenshot.log 2>&1'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
