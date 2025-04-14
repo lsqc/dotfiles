@@ -1,17 +1,24 @@
-
-
 general {
         output_format = "i3bar"
         colors = false
         interval = 1
 }
 
+order += "volume master"
 order += "wireless wlp3s0"
 order += "ethernet enp0s25"
 order += "load"
 order += "battery 0"
 order += "memory"
 order += "tztime local"
+
+volume master {
+        format = "vol %volume"
+        format_muted = "vol: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
 
 wireless wlan0 {
         format_up = "W: (%quality at %essid, %bitrate) %ip"
