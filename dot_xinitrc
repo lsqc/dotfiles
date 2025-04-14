@@ -11,7 +11,7 @@ xrdb ~/.Xresources
 feh --bg-fill .local/share/wallpapers/latest.png & 
 
 # start polybar
-polybar &
+#polybar & => replaced with i3bar
 
 # set keyboard layout 
 setxkbmap eu
