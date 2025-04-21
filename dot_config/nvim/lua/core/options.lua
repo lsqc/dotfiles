@@ -10,8 +10,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.termguicolors = true
 
+vim.o.shiftround = true
 vim.opt.path:append("**")
-vim.opt.path:append(".")
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+
