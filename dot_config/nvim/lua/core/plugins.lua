@@ -19,11 +19,9 @@ require("lazy").setup({
             "goolord/alpha-nvim",
             dependencies = { 'nvim-tree/nvim-web-devicons' },
             config = function()
-            local startify = require("alpha.themes.startify")
-            startify.file_icons.provider = "devicons"
-            require("alpha").setup(
-                startify.config
-            )
+                local startify = require("alpha.themes.startify")
+                startify.file_icons.provider = "devicons"
+                require("alpha").setup(startify.config)
             end,
         },
         {
@@ -44,7 +42,36 @@ require("lazy").setup({
                 }
             end,
             version = "^1.0.0",
+        },
+        {
+            'nvim-java/nvim-java',
+            dependencies = {
+                'nvim-java/lua-async-await',
+                'nvim-java/nvim-java-core',
+                'nvim-java/nvim-java-test',
+                'nvim-java/nvim-java-dap',
+                'mfussenegger/nvim-dap',
+                'neovim/nvim-lspconfig',
+            },
+            config = function()
+                local jdtls = require('lspconfig').jdtls
+                local root_dir = require('lspconfig').util.root_pattern('pom.xml', '.git')
+
+                jdtls.setup({
+                    cmd = { 'jdtls' },  
+                    root_dir = root_dir,
+                    settings = {
+                        java = {
+                            maven = {
+                                downloadSources = true
+                            }
+                        }
+                    }
+                })
+            end,
+            ft = { "java" },
         }
     },
-    checker = { enabled = true },
+    checker = { enabled = true }
 })
+
