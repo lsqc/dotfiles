@@ -12,6 +12,6 @@ Host git.ha.si
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/gitkey
 
-Host git.lsdevcloud.net
+Host git.lsdevmedia.net
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/gitkey
