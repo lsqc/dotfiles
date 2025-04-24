@@ -1,4 +1,4 @@
-local ok, _ = pcall(vim.cmd, 'colorscheme nord')
+local ok, _ = pcall(vim.cmd, 'colorscheme tokyonight-storm')
 if not ok then
   vim.cmd('colorscheme default')
 end
