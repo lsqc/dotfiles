@@ -1,6 +1,11 @@
 require("lazy").setup({
     spec = {
-        { "shaunsingh/nord.nvim" },
+        {
+            "folke/tokyonight.nvim",
+            lazy = false,
+            priority = 1000,
+            opts = {},
+        },
         { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
         { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
         { "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
