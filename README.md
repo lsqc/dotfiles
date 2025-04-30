@@ -1,7 +1,7 @@
 # dotfiles
 
 ## used software
-- 🔧 window manager: dwm (<a href="https://github.com/lsqc/dwm">https://github.com/lsqc/dwm</a>)
+- 🔧 window manager: i3 (<a href="https://i3wm.org">https://i3wm.org</a>)
 - 💲 terminal: alacritty (<a href="https://alacritty.org">https://alacritty.org</a>)
 - 🪟 compositor: picom (<a href="https://github.com/yshui/picom">https://github.com/yshui/picom</a>)
 - 🚀 app launcher: rofi (<a href="https://github.com/davatorium/rofi">https://github.com/davatorium/rofi</a>)
