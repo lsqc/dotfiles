@@ -32,6 +32,8 @@ map('n', '<Home>', '^', opts)
 map('n', '<End>', '$', opts)
 map('n', '<Space>e', ':qa!<CR>', opts)
 
+vim.keymap.set('n', '<leader>a', ':Alpha<CR>', { noremap = true, silent = true })
+
 vim.keymap.set('n', '<Space>q', function()
   vim.wo.number = not vim.wo.number
   vim.wo.relativenumber = vim.wo.number
