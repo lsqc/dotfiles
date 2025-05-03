@@ -1,0 +1,26 @@
+local alpha = require("alpha")
+local dashboard = require("alpha.themes.dashboard")
+
+dashboard.section.header.val = {
+    "                                                     ",
+    "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+    "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+    "  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+    "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+    "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+    "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+    "                                                     ",
+}
+
+dashboard.section.buttons.val = {
+    dashboard.button( "n", "  new file" , ":ene <BAR> startinsert <CR>"),
+    dashboard.button( "f", "  find file", ":cd $HOME/repos | Telescope find_files<CR>"),
+    dashboard.button( "r", "  recent"   , ":Telescope oldfiles<CR>"),
+    dashboard.button( "e", "  quit", ":qa<CR>"),
+}
+
+alpha.setup(dashboard.opts)
+
+vim.cmd([[
+    autocmd FileType alpha setlocal nofoldenable
+]])
