@@ -19,8 +19,14 @@ dashboard.section.buttons.val = {
     dashboard.button( "q", "  quit", ":qa<CR>"),
 }
 
+-- set color path
 dashboard.section.header.opts.hl = "AlphaHeaderCustom"
 
+dashboard.section.footer.val = {
+  ">w<"
+}
+
+-- push settings to alpha
 alpha.setup(dashboard.opts)
 
 vim.cmd([[
