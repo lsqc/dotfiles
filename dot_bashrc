@@ -35,3 +35,7 @@ alias pacsyu='sudo pacman -Syu'
 
 # set prompt
 export PS1="\[$(tput setaf 42)\]\w \[$(tput setaf 33)\]❯ \[$(tput setaf 14)\]\[$(tput sgr0)\]"
+
+# start ssh agent
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/gitkey.pub
