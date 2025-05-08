@@ -26,7 +26,8 @@ alias wiredown='sudo wg-quick down fsn1'
 
 alias suicide="shutdown now"
 
-alias ls='ls -lsa --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
 
 # set alias for neofetch
 alias neofetch="hyfetch"
