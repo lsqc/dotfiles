@@ -235,7 +235,7 @@ default_border pixel 3
 default_floating_border pixel 0
 
 # window gaps
-gaps inner 5px
+gaps inner 3px
 
 #set background image 
 exec feh --bg-fill ~/.local/share/wallpapers/latest.png
