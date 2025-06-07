@@ -15,3 +15,7 @@ Host git.ha.si
 Host git.lsdevmedia.net
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/gitkey
+
+Host git.leviathan.lsdevcloud.net
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/gitkey
