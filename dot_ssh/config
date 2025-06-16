@@ -19,3 +19,7 @@ Host git.lsdevmedia.net
 Host git.leviathan.lsdevcloud.net
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/gitkey
+
+Host git.proxima-centauri.lsdevcloud.net
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/gitkey
