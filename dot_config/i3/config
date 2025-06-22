@@ -209,6 +209,29 @@ set $fuchsia-color "#845EC2"
 default_border pixel 3
 default_floating_border pixel 0
 
+# i3bar config
+bar {
+    tray_output primary
+    font pango:Comic Shanns Regular, FontAwesome 15
+    position bottom
+#   padding 0px 10px 0px 10px
+    
+    #i3bar_command i3bar --transparency 
+    status_command i3status #-rs ~/.i3status-rs.conf
+    #colors {
+		## colorclass border background text
+        #separator #ffffff
+        #background #00000000
+        ##background #120f16
+	    #background #000000
+        #statusline #dddddd
+        #focused_workspace #46494C #46494C #00aaff ##1985A1
+        #active_workspace #46494C #46494C #ffffff
+        #inactive_workspace #120f16 #120f16 #46494C
+##       urgent_workspace #2f343a #900000 #ffffff
+    #}
+}
+
 # window gaps
 gaps inner 5px
 
