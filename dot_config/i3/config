@@ -28,6 +28,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 #bindsym XF86AudioPause exec playerctl play-pause
 #bindsym XF86AudioNext exec playerctl next
 #bindsym XF86AudioPrev exec playerctl previous
+
 floating_modifier Mod1
 
 tiling_drag modifier titlebar
@@ -62,9 +63,6 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 bindsym $mod+f fullscreen toggle
-
-# file manager hotkey
-bindsym $mod+e exec alacritty -e nnn
 
 bindsym $mod+Shift+space floating toggle
 
