@@ -206,7 +206,7 @@ set $fuchsia-color "#845EC2"
 
 # window borders
 #for_window [class="^.*"] border pixel 3
-default_border pixel 5
+default_border pixel 3
 default_floating_border pixel 0
 
 # window gaps
