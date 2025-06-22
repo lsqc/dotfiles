@@ -1,6 +1,6 @@
-set $mod Mod4
+font Hack 15
 
-font Comic Shanns Regular 15
+set $mod Mod4
 
 exec xrdb ~/.Xresources
 exec dbus-update-activation-environment
@@ -17,9 +17,9 @@ set $right semicolon
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
@@ -33,7 +33,7 @@ floating_modifier Mod1
 
 tiling_drag modifier titlebar
 
-bindsym $mod+Return exec alacritty #--command tmux
+bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal
 
 bindsym $mod+Shift+q kill
 
@@ -204,36 +204,13 @@ bindsym Mod4+r mode "resize"
 # placeholder for color
 set $fuchsia-color "#845EC2"
 
-# Start i3bar to display a workspace bar
-bar {
-    tray_output primary
-    font pango:Comic Shanns Regular, FontAwesome 15
-    position bottom
-#   padding 0px 10px 0px 10px
-    
-    #i3bar_command i3bar --transparency 
-    status_command i3status #-rs ~/.i3status-rs.conf
-    #colors {
-		## colorclass border background text
-        #separator #ffffff
-        #background #00000000
-        ##background #120f16
-	    #background #000000
-        #statusline #dddddd
-        #focused_workspace #46494C #46494C #00aaff ##1985A1
-        #active_workspace #46494C #46494C #ffffff
-        #inactive_workspace #120f16 #120f16 #46494C
-##       urgent_workspace #2f343a #900000 #ffffff
-    #}
-}
-
 # window borders
 #for_window [class="^.*"] border pixel 3
 default_border pixel 3
 default_floating_border pixel 0
 
 # window gaps
-gaps inner 3px
+gaps inner 5px
 
 #set background image 
 exec feh --bg-fill ~/.local/share/wallpapers/latest.png
