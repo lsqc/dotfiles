@@ -1,9 +1,9 @@
 [font]
-size = 11
+size = 14
 
 [font.normal]
-#family = "Comic Code Ligatures"
-family = "Comic Shanns Regular"
+#family = "Comic Shanns Regular"
+family = "Ac437 IBM Model3x Alt2"
 
 [general]
 import = [
