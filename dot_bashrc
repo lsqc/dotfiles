@@ -13,8 +13,6 @@ fi
 # set editor
 export EDITOR=nvim
 
-export TERM=xterm-256color
-
 # nvim alias
 alias vim='nvim'
 alias vi='nvim'
@@ -34,8 +32,5 @@ alias grep='grep --color=auto'
 alias pacsyu='sudo pacman -Syu'
 
 # set prompt
-export PS1="\[$(tput setaf 42)\]\w \[$(tput setaf 33)\]❯ \[$(tput setaf 14)\]\[$(tput sgr0)\]"
-
-# start ssh agent
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/gitkey
+export PS1="\[$(tput setaf 147)\]\u\[$(tput setaf 122)\]::\[$(tput setaf 61)\]\h \[$(tput setaf 255)\]in \[$(tput setaf 69)\]\w\[$(tput setaf 14)\]\[$(tput sgr0)\] \[$(tput setaf 79)\]∫ \[$(tput setaf 255)\]"
+. "/home/lsqc/.acme.sh/acme.sh.env"
