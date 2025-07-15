@@ -1,9 +1,11 @@
 [font]
-size = 14
+size = 13
 
 [font.normal]
 #family = "Comic Shanns Regular"
-family = "Ac437 IBM Model3x Alt2"
+#family = "Ac437 IBM Model3x Alt2"
+
+family = "LigaMonacoNerdFont"
 
 [general]
 import = [
