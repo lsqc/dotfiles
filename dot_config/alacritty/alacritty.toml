@@ -9,3 +9,6 @@ family = "Ac437 IBM Model3x Alt2"
 import = [
     "~/.config/alacritty/themes/themes/hyper.toml",
 ]
+
+[colors]
+cursor = { text = "#84c1db", cursor = "#84c1db" }
