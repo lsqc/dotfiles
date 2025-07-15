@@ -39,9 +39,9 @@ alias pacsyu='sudo pacman -Syu'
 
 export TERM=xterm-256color
 
-# set prompt
-export PS1="\[$(tput setaf 147)\]\u\[$(tput setaf 122)\]::\[$(tput setaf 61)\]\h \[$(tput setaf 255)\]in \[$(tput setaf 69)\]\w\[$(tput setaf 14)\]\[$(tput sgr0)\] \[$(tput setaf 79)\]∫ \[$(tput setaf 255)\]"
-
 # start ssh agent
 eval "$(ssh-agent -s)" > /dev/null
 ssh-add ~/.ssh/gitkey > /dev/null 2>&1
+
+# set prompt
+export PS1="\[$(tput setaf 147)\]\u\[$(tput setaf 122)\]::\[$(tput setaf 61)\]\h \[$(tput setaf 255)\]∈  \[$(tput setaf 69)\]\w\[$(tput setaf 14)\]\[$(tput sgr0)\] \[$(tput setaf 79)\]∫ \[$(tput setaf 255)\]"
