@@ -26,7 +26,8 @@ blueman-applet &
 feh --bg-fill .local/share/wallpapers/latest.png &
 
 # start polybar
-polybar &
+#polybar &
+~/repos/dotfiles/scripts/polybar.sh &
 
 # start window manager
 exec i3
