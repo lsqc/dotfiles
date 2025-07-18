@@ -17,9 +17,6 @@ export EDITOR=nvim
 alias vim='nvim'
 alias vi='nvim'
 
-# alias for suckless make
-alias slmake='sudo make clean install'
-
 # vpn
 alias wireup='sudo wg-quick up fsn1'
 alias wiredown='sudo wg-quick down fsn1'
