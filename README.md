@@ -16,4 +16,4 @@
 
 themes: <a href="https://github.com/alacritty/alacritty-theme">https://github.com/alacritty/alacritty-theme</a>
 
-## Licensed under the terms and conditions of the GNU General Public License v3. (see `LICENSE` for details)
+## Licensed under the terms and conditions of the GNU Affero General Public License v3. (see `LICENSE` for details)
