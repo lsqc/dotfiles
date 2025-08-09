@@ -1,4 +1,4 @@
-local ok, _ = pcall(vim.cmd, 'colorscheme quiet')
+local ok, _ = pcall(vim.cmd, 'colorscheme default')
 if not ok then
   vim.cmd('colorscheme default')
 end
@@ -14,4 +14,4 @@ vim.api.nvim_set_hl(0, 'LineNr', { fg='#FB508F', bold=true })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#292929', bold=false })
 
 -- set color for alpha header
-vim.api.nvim_set_hl(0, "AlphaHeaderCustom", { fg = "#0ac963" }) 
+vim.api.nvim_set_hl(0, "AlphaHeaderCustom", { fg = "#6A28BD" }) 
