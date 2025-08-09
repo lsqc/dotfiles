@@ -198,6 +198,9 @@ mode "resize" {
         bindsym Mod1+r mode "default"
 }
 
+# <colorclass>          <border>    <background>    <text>      <indicator> <child_border>
+client.focused          #702ac7     #702ac7         #702ac7     #702ac7     #702ac7
+
 # resize mode hotkey
 bindsym Mod4+r mode "resize"
 
@@ -210,7 +213,7 @@ default_border pixel 3
 default_floating_border pixel 0
 
 # window gaps
-gaps inner 5px
+gaps inner 9px
 
 #set background image 
 exec feh --bg-fill ~/.local/share/wallpapers/latest.png
@@ -234,3 +237,4 @@ for_window [class="Firefox" title="^Page Info"] floating enable
 assign [class="jetbrains-toolbox"] $ws3
 assign [class="signal"] $ws19
 
+exec --no-startup-id setxkbmap -option ctrl:nocaps
