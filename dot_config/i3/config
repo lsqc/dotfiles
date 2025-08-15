@@ -198,6 +198,8 @@ mode "resize" {
         bindsym Mod1+r mode "default"
 }
 
+client.focused          #702ac7     #702ac7         #702ac7     #702ac7     #702ac7 
+
 # resize mode hotkey
 bindsym Mod4+r mode "resize"
 
