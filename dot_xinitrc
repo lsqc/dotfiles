@@ -34,6 +34,9 @@ export TERM=xterm-256color
 # start lxsession
 lxsession &
 
+# start nm applet
+nm-applet & 
+
 # start bluetooth applet
 blueman-applet &
 
