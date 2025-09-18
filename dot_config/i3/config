@@ -5,6 +5,7 @@ set $mod Mod4
 exec xrdb ~/.Xresources
 exec dbus-update-activation-environment
 exec --no-startup-id dex --autostart --environment i3
+exec nm-applet
 
 exec_always ~/scripts/trackpadconfig.sh
 
