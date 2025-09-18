@@ -2,10 +2,10 @@
 size = 10
 
 [font.normal]
-#family = "Comic Shanns Regular"
+family = "Comic Shanns Mono NerdFont"
 #family = "Ac437 IBM Model3x Alt2"
-
-family = "LigaMonacoNerdFont"
+#family = "DejaVu Sans Mono"
+#family = "LigaMonacoNerdFont"
 
 [general]
 import = [
