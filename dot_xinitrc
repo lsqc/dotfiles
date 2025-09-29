@@ -17,7 +17,8 @@ feh --bg-fill .local/share/wallpapers/latest.png &
 setxkbmap eu
 
 # start notification agent
-/usr/lib/notification-daemon-1.0/notification-daemon &
+#/usr/lib/notification-daemon-1.0/notification-daemon &
+dunst&
 
 # start polkit
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
