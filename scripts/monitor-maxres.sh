@@ -1,4 +1,3 @@
-#!/bin/bash
 
 monitors=$(xrandr --query | grep " connected" | awk '{print $1}')
 
