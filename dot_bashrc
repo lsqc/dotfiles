@@ -13,6 +13,8 @@ fi
 # set editor
 export EDITOR=nvim
 
+alias clipboard='xclip -selection clipboard'
+
 # nvim alias
 alias vim='nvim'
 alias vi='nvim'
