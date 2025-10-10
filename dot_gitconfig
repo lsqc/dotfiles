@@ -13,4 +13,5 @@
 	co = checkout
 	b = branch
 	c = commit
-	st = status
+    st = status
+    me = merge
