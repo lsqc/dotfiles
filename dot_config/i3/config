@@ -11,10 +11,10 @@ exec_always ~/scripts/trackpadconfig.sh
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-set $up n
-set $down k
-set $left j
-set $right semicolon
+set $up k
+set $down j
+set $left h
+set $right l
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
@@ -60,8 +60,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+Ctrl+h split h
+bindsym $mod+Ctrl+v split v
 
 bindsym $mod+f fullscreen toggle
 
@@ -140,7 +140,7 @@ bindsym Mod1+Tab workspace back_and_forth
 bindsym Mod1+Shift+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
 
 # lock screen
-bindsym $mod+l exec "betterlockscreen -l dimblur --display 1 --span"
+bindsym $mod+Mod1+l exec "betterlockscreen -l dimblur --display 1 --span"
 
 # move focused container to workspace
 # numbers
