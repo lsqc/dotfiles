@@ -1,12 +1,22 @@
-require("core.options")
-require("core.bootstrap")
-require("core.plugins")
-require("plugins.treesitter")
-require("plugins.lualine")
-require("plugins.nvimtree")
-require("plugins.lsp")
-require("plugins.alpha")
-require("core.theme")
-require("core.autocmds")
-require("core.keymaps")
-require("plugins.barbar")
+-- lazy bootstrap
+require("config.lazy")
+
+-- load plugins
+require("lazy").setup("plugins")
+
+-- set theme
+require("config/theme")
+
+require("core")
+
+-- base settings 
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.termguicolors = true
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.mouse = ""
+
+-- keymaps
+vim.g.mapleader = " "
