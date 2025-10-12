@@ -1,0 +1,18 @@
+[user]
+	email = lsqc@nya.vodka
+	name = lsqc
+    signingKey = /home/lsqc/.ssh/gitkey
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
+
+[alias]
+	co = checkout
+	b = branch
+	c = commit
+    st = status
+    me = merge
+    cp = cherry-pick
