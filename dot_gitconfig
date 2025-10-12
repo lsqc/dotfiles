@@ -15,3 +15,4 @@
 	c = commit
     st = status
     me = merge
+    cp = cherry-pick
