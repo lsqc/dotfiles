@@ -5,15 +5,16 @@ set $mod Mod4
 exec xrdb ~/.Xresources
 exec dbus-update-activation-environment
 exec --no-startup-id dex --autostart --environment i3
+exec nm-applet
 
 exec_always ~/scripts/trackpadconfig.sh
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-set $up n
-set $down k
-set $left j
-set $right semicolon
+set $up k
+set $down j
+set $left h
+set $right l
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
@@ -24,10 +25,10 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-#bindsym XF86AudioPlay exec playerctl play-pause
-#bindsym XF86AudioPause exec playerctl play-pause
-#bindsym XF86AudioNext exec playerctl next
-#bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 floating_modifier Mod1
 
@@ -59,8 +60,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+Ctrl+h split h
+bindsym $mod+Ctrl+v split v
 
 bindsym $mod+f fullscreen toggle
 
@@ -139,7 +140,7 @@ bindsym Mod1+Tab workspace back_and_forth
 bindsym Mod1+Shift+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
 
 # lock screen
-bindsym $mod+l exec "betterlockscreen -l dimblur --display 1 --span"
+bindsym $mod+Mod1+l exec "betterlockscreen -l dimblur --display 1 --span"
 
 # move focused container to workspace
 # numbers
@@ -169,7 +170,7 @@ bindsym $mod+Shift+F11 move container to workspace number $ws21
 bindsym $mod+Shift+F12 move container to workspace number $ws22
 
 # screenshot hotkey
-bindsym Shift+Print exec --no-startup-id /bin/bash -c '~/repos/dotfiles/scripts/screenshot.sh >> ~/screenshot.log 2>&1'
+bindsym Shift+Print exec --no-startup-id bash -c '~/repos/dotfiles/scripts/screenshot.sh >> ~/screenshot.log 2>&1'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -198,8 +199,7 @@ mode "resize" {
         bindsym Mod1+r mode "default"
 }
 
-# <colorclass>          <border>    <background>    <text>      <indicator> <child_border>
-client.focused          #702ac7     #702ac7         #702ac7     #702ac7     #702ac7
+client.focused          #702ac7     #702ac7         #702ac7     #702ac7     #702ac7 
 
 # resize mode hotkey
 bindsym Mod4+r mode "resize"
@@ -213,7 +213,7 @@ default_border pixel 3
 default_floating_border pixel 0
 
 # window gaps
-gaps inner 9px
+gaps inner 5px
 
 #set background image 
 exec feh --bg-fill ~/.local/share/wallpapers/latest.png
@@ -237,4 +237,3 @@ for_window [class="Firefox" title="^Page Info"] floating enable
 assign [class="jetbrains-toolbox"] $ws3
 assign [class="signal"] $ws19
 
-exec --no-startup-id setxkbmap -option ctrl:nocaps
