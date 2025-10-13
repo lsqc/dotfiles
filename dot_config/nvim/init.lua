@@ -4,6 +4,9 @@ require("config.lazy")
 -- keymap
 require("config.keymap")
 
+-- autocmds
+require("config.autocmds")
+
 -- load plugins
 require("lazy").setup(require("plugins"))
 

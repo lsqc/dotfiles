@@ -1,3 +1,4 @@
+-- lua
 vim.lsp.config['luals'] = {
 
     cmd = { 'lua-language-server' },
@@ -14,3 +15,11 @@ vim.lsp.config['luals'] = {
 
 -- enable lua language server
 vim.lsp.enable('luals')
+
+-- clang
+vim.lsp.start({
+  name = 'clangd',
+  cmd = { 'clangd', '--log=verbose' },
+  verbose = true,
+  root_dir = '.'
+})

@@ -1,5 +1,3 @@
---vim.g.mapleader = "<--C-w>"
-
 -- telescope
 vim.keymap.set('n', '<leader>t', function()
   require('telescope.builtin').find_files({ initial_mode = "normal" })
