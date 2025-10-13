@@ -1,10 +1,12 @@
-require("tokyonight").setup({
+theme = "tokyonight"
+
+require(theme).setup({
     style = "storm",
     transparent = true,
     styles = {},
 })
 
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme(theme)
 
 -- taken from old config
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#292929', bold=false })
