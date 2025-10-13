@@ -1,4 +1,6 @@
 --vim.g.mapleader = "<--C-w>"
 
 -- telescope
-vim.keymap.set('n', '<leader>t', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>t', function()
+  require('telescope.builtin').find_files({ initial_mode = "normal" })
+end, { noremap = true, silent = true })
