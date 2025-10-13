@@ -1,10 +1,10 @@
-theme = "tokyonight"
+theme = "nordic"
 
-require(theme).setup({
-    style = "storm",
-    transparent = true,
-    styles = {},
-})
+--require(theme).setup({
+--    --style = "storm",
+--    transparent = true,
+--    styles = {},
+--})
 
 vim.cmd.colorscheme(theme)
 
@@ -12,3 +12,8 @@ vim.cmd.colorscheme(theme)
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#292929', bold=false })
 vim.api.nvim_set_hl(0, 'LineNr', { fg='#6151f0', bold=true })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#292929', bold=false })
+
+vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
+vim.cmd('highlight NvimTreeNormal guibg=NONE ctermbg=NONE')
+vim.cmd('highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE')
+
