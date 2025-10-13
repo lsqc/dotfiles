@@ -5,7 +5,7 @@ require("config.lazy")
 require("config.keymap")
 
 -- load plugins
-require("lazy").setup("plugins")
+require("lazy").setup(require("plugins"))
 
 -- set theme
 require("config.theme")
