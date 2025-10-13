@@ -10,6 +10,8 @@ require("lazy").setup(require("plugins"))
 -- set theme
 require("config.theme")
 
+require("config.lsp")
+
 -- base settings 
 vim.opt.number = true
 vim.opt.relativenumber = true
