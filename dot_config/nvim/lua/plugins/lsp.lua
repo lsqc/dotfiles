@@ -1,8 +1,8 @@
-local lspconfig = require("lspconfig")
+#local lspconfig = require("lspconfig")
 
-lspconfig.jdtls.setup {
+vim.lsp.config.jdtls.setup {
     cmd = { "jdtls" },
-    root_dir = lspconfig.util.root_pattern("settings.gradle", "pom.xml", ".git"),
+    root_dir = vim.lsp.util.root_pattern("settings.gradle", "pom.xml", ".git"),
     settings = {
         java = {
             contentProvider = { preferred = "fernflower" },
