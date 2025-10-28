@@ -23,3 +23,7 @@ Host git.leviathan.lsdevcloud.net
 Host git.proxima-centauri.lsdevcloud.net
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/gitkey
+
+Host cerberus-v2.lsdevcloud.net
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_ed25519
