@@ -11,13 +11,13 @@ if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]
 fi
 
 # set editor
-export EDITOR=nvim
+export EDITOR=hx
 
 alias clipboard='xclip -selection clipboard'
 
 # nvim alias
-alias vim='nvim'
-alias vi='nvim'
+alias vim='hx'
+alias vi='hx'
 
 # vpn
 alias wireup='sudo wg-quick up fsn1'
