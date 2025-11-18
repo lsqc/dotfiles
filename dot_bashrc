@@ -11,13 +11,15 @@
 #fi
 
 # set editor
-export EDITOR=nvim
+export EDITOR=helix
 
 alias clipboard='xclip -selection clipboard'
 
 # nvim alias
-alias vim='nvim'
-alias vi='nvim'
+alias vim='helix'
+alias vi='helix'
+alias hx='helix'
+alias zi='yazi'
 
 # vpn
 alias wireup='sudo wg-quick up fsn1'
