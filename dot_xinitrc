@@ -13,6 +13,8 @@ feh --bg-fill .local/share/wallpapers/latest.png &
 # start polybar
 #polybar & => replaced with i3bar
 
+dbus-update-activation-environment --all &
+
 # set keyboard layout 
 setxkbmap eu
 
