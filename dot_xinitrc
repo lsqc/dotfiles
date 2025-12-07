@@ -32,6 +32,8 @@ picom --config ~/.config/picom.conf &
 # set term env variable
 export TERM=xterm-256color
 
+dbus-update-activation-enviroment --all &
+
 # start lxsession
 lxsession &
 
