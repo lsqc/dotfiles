@@ -14,3 +14,7 @@ import = [
 
 [colors]
 cursor = { text = "#84c1db", cursor = "#84c1db" }
+
+[cursor.style]
+blinking = "Always"
+shape = "block"
