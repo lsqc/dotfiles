@@ -15,6 +15,10 @@ import = [
 [colors]
 cursor = { text = "#84c1db", cursor = "#84c1db" }
 
+[cursor]
+blink_interval = 500
+blink_timeout = 0
+
 [cursor.style]
 blinking = "Always"
 shape = "block"
