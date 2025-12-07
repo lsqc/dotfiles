@@ -16,6 +16,8 @@ setxkbmap eu
 # start picom
 picom --config ~/.config/picom.conf &
 
+dbus-update-activation-enviroment --all &
+
 # start lxsession
 lxsession &
 
