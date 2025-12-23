@@ -34,8 +34,8 @@ floating_modifier Mod1
 
 tiling_drag modifier titlebar
 
-bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal
-bindsym $mod+Shift+Return exec TERMINAL=alacritty i3-sensible-terminal -e tmux
+bindsym $mod+Shift+Return exec TERMINAL=alacritty i3-sensible-terminal
+bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal -e tmux
 
 bindsym $mod+Shift+q kill
 
