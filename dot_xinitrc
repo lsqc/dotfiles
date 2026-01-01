@@ -32,4 +32,4 @@ feh --bg-fill .local/share/wallpapers/latest.png &
 ~/repos/dotfiles/scripts/polybar.sh &
 
 # start window manager
-exec i3
+# exec i3

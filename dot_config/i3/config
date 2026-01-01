@@ -141,7 +141,7 @@ bindsym Mod1+Tab workspace back_and_forth
 bindsym Mod1+Shift+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
 
 # lock screen
-bindsym $mod+Mod1+l exec "betterlockscreen -l dimblur --display 1 --span"
+bindsym $mod+Mod1+l exec "i3lock"
 
 # move focused container to workspace
 # numbers
