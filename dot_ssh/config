@@ -27,3 +27,7 @@ Host git.proxima-centauri.lsdevcloud.net
 Host cerberus-v2.lsdevcloud.net
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_ed25519
+
+Host git2.nya.vodka
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/gitkey
